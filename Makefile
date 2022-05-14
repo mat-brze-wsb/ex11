@@ -1,0 +1,17 @@
+.PHONY: deps test
+
+deps:
+		pip install -r requirements.txt; \
+					pip install -r test_requirements.txt
+
+lint:
+	flake8 hello_world test
+
+test:
+		PYTHONPATH=. py.test
+
+docker_build:
+		docker image build -t hello-world-printer .
+
+run:
+		PYTHONPATH=. FLASK_APP=hello_world flask run
