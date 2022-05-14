@@ -24,3 +24,7 @@ jobs:
 
       - name: Build Image
         run: make docker_build
+
+      - name: Build Image
+        run: make docker_run
+
