@@ -52,6 +52,6 @@ jobs:
           with:
             context: .
             push: true
-            tags: matbrzewsb/test:latest
+            tags: matbrzewsb/test:1.1.0
 
 
